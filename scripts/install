@@ -60,10 +60,10 @@ ynh_script_progression --message="Configuring the app..." --weight=2
 ynh_add_config --template="../conf/config.json" --destination="$install_dir/config.json"
 
 setup="{
-		\"admin:username\": \"$admin\",
-		\"admin:password\": \"$password\",
-		\"admin:password:confirm\": \"$password\",
-		\"admin:email\": \"$email\"
+		\"admin:username\": \"admin\",
+		\"admin:password\": \"admin\",
+		\"admin:password:confirm\": \"admin\",
+		\"admin:email\": \"colin@maudry.com\"
 	}"
 
 pushd $install_dir
