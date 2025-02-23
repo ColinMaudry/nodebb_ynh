@@ -5,7 +5,7 @@ name = "NodeBB"
 description.en = "Forum software built for the modern web"
 description.fr = "Logiciel de forum conçu pour le Web moderne"
 
-version = "4.0.1~ynh1"
+version = "3.12.4~ynh1"
 
 maintainers = []
 
@@ -30,9 +30,19 @@ ram.build = "1500M"
 ram.runtime = "750M"
 
 [install]
+  
+    [install.user_nodebb_version]
+    ask.fr = "Quelle version souhaitez-vous installer ?"
+    help.fr = "La version 4.x est la plus récente, mais peu de plugins sont compatibles (pour l'instant)."
+    ask.en = "Which version do you want to install?"
+    help.en = "Version 4.x is the latest, but few plugins are compatible (as of now)."
+    type = "string"
+    choices.v3 = "version 3.x"
+    choices.v4 = "version 4.x"
+    
     [install.domain]
     type = "domain"
-
+    
     [install.path]
     type = "path"
     default = "/forum"
