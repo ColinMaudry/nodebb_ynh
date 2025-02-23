@@ -2,8 +2,6 @@
 
 source _common.sh
 source /usr/share/yunohost/helpers
-echo "NodeBB version: $user_nodebb_version"
-exit 1
 
 #=================================================
 # RETRIEVE ARGUMENTS FROM THE MANIFEST
@@ -24,7 +22,7 @@ ynh_nodejs_install
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
-ynh_script_progression "Setting up source files..."
+ynh_script_progression "Setting up source files for NodeBB $user_nodebb_version..."
 
 git config --system --add safe.directory $install_dir
 git clone -b $nodebb_version https://github.com/NodeBB/NodeBB.git "$install_dir" --quiet

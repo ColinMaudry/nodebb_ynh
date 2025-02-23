@@ -5,4 +5,12 @@
 #=================================================
 
 nodejs_version="22"
-nodebb_version=v3.x
+
+# user_nodebb_version is picked by user as installation option
+# configured in manifest.toml
+
+if [[ $user_nodebb_version == "v3" ]]; then
+    nodebb_version="v3.x"
+else
+    nodebb_version="v4.x"
+fi
